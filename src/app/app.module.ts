@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { ListHeroComponent } from './list-hero/list-hero.component';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,7 @@ import { ListHeroComponent } from './list-hero/list-hero.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule, MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

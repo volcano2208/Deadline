@@ -58,13 +58,14 @@
         #address="ngModel"
       />
       <div
-        [hidden]="address.valid || address.pristine"
+        [hidden]="address.valid || address.pristine "
         class="alert alert-danger"
       >
         Address is required
       </div>
     </div>
-    <div class="form-group">
+    <mat-checkbox #checkbox [checked]="checked">Checkbox</mat-checkbox>
+    <div class="form-group" *ngIf="checkbox.checked">
       <label for="email">Email</label>
       <input
         type="text"

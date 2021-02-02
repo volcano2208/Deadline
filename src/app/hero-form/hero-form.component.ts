@@ -12,11 +12,17 @@ import { FormControl } from '@angular/forms';
 
 
 export class HeroFormComponent implements OnInit {
+
+  constructor() {
+
+  }
   @Output() listFinal = new EventEmitter<any>();
   @Input() childMes = '';
   careers = ['Developer', 'Fresher', 'Project Manager'];
   hobbies = ['Soccer', 'Baseball'];
   submitted = false;
+  checked = true;
+  // tslint:disable-next-line: typedef
   flag = 0;
   hero: Hero = {
     id: new FormControl().value,
@@ -29,7 +35,6 @@ export class HeroFormComponent implements OnInit {
   };
   list: any[] = [
   ];
-
   // tslint:disable-next-line: typedef
   onSubmit() {
     // ($event.target as HTMLButtonElement).disabled = true;
@@ -75,10 +80,6 @@ export class HeroFormComponent implements OnInit {
   }
   // tslint:disable-next-line: typedef
   ngOnInit(): void {
-  }
-
-  constructor() {
-
   }
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnChanges(changes: SimpleChanges): void {
